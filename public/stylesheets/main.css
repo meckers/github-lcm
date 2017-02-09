@@ -1,0 +1,52 @@
+body {
+    background-color: #181818;
+    margin-top: 50px;
+    font-family: verdana;
+    font-size: 11px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+h3 {
+    margin-bottom: 0px;
+}
+
+.button {
+    width: 185px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.content {
+    width: 640px;
+    position: absolute;
+    left: 50%;
+    margin-left: -320px;
+}
+
+#char-matrix {
+    width: 640px;
+    height: 640px;
+    margin: 0px;
+    border: 1px solid #404040;
+}
+
+div.char-cell {
+    width: 16px;
+    height: 16px;
+    /*background-position: -0px -16px;*/
+    float:left;
+}
+
+.instructions {
+    float: left;
+}
+
+.font-cav-of-sillahc {
+    background-image: url(/images/cav_of_sillahc_x2_anim.png);
+}

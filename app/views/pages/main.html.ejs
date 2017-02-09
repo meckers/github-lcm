@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" media="screen" href="/stylesheets/main.css">
+        <script data-main="/scripts/main.js" src="/scripts/lib/require.js"></script>
+        <script src="/scripts/lib/simple-javascript-inheritance.js"></script>
+        <script src="/scripts/lib/underscore-min.js"></script>
+        <script src="/scripts/lib/jquery-1.10.2.min.js"></script>
+        <script>
+            require.config({
+                paths: {
+                    'baseUrl': '/public/scripts'
+                }
+            });
+        </script>
+    </head>
+    <body>
+		<div class="content">
+
+		    <div id="char-matrix"></div>
+
+		    <input type="button" class="button" id="toggle-music" value="Turn music off" />
+		    <input type="button" class="button" id="start-recording" value="Record a new message" />
+		    <input type="button" class="button" id="play-recording" value="Replay current message" />
+
+		    <!--input type="button" class="button" id="dump-recording" value="Dump data into console" /-->
+
+		    <div id="colour-instructions" class="instructions">
+		        <h3>Colours:</h3>
+		        <ul id="colour-list">
+		            <li>ctrl 1 : white</li>
+		            <li>ctrl 2 : yellow</li>
+		            <li>ctrl 3 : light brown</li>
+		            <li>ctrl 4 : dark brown</li>
+		            <li>ctrl 5 : pink</li>
+		            <li>ctrl 6 : dark grey</li>
+		            <li>ctrl 7 : medium grey</li>
+		        </ul>
+		        ...that's the ctrl key even for you mac users!
+		    </div>
+
+		    <div id="char-instructions" class="instructions">
+		        <h3>Animated characters:</h3>
+		        <ul id="colour-list">
+		            <li>ctrl -: minus sign (-)</li>
+		            <li>ctrl shift = : equal sign (=)</li>
+		            <li>ctrl shift * : asterisk (*)</li>
+		        </ul>
+		        (Animation currently not supported in firefox)
+		    </div>
+
+		</div>
+
+		<audio id="music" src="/music/formula_one.mp3" autoplay></audio>
+
+		<script type="text/x-underscore" id="template-cell">
+		    <div class='char-cell font-cav-of-sillahc'></div>
+		</script>		
+
+    </body>
+</html>
